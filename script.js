@@ -16,7 +16,7 @@ function handleOnClick() {
     let hh = document.getElementById("hh").value;
     let mm = document.getElementById("mm").value;
     let ampm = document.getElementById("ampm").value;
-    hh = ampm === "PM" ? hh + 12 : hh;
+    hh = ampm === "PM" ? Number.parseInt(hh) + 12 : hh;
     let now = new Date();
     now.setHours(hh);
     now.setMinutes(mm);
